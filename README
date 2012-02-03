@@ -1,0 +1,26 @@
+                        TEXT REGISTER MACHINE IN APL
+                        ────────────────────────────
+
+The TRM workspace contains an interpreter for the 1# language by Larry Moss. 
+It is designed to be a simple, illustrative interpreter demonstrating both
+the simplicty of 1# as well as the elegance of APL.
+
+Launching the workspace, you can then run a 1# program by using the
+following EVAL:
+
+	R←N EVAL P
+
+Here N is the register state, P is the program text, consisting only of
+spaces, 1's, and #'s, and R is the return result, which is the machine state
+(register state) at the end of the computation. If you want to start with a
+simple empty register state of M empty registers, you can do something like
+this:
+
+	(M⍴⊂⍬)EVAL P
+
+Otherwise each element of N should be a character vector of 1's and #'s. You
+can see a nicer printed representation of a register machine state by using
+the PRINT∆TRM function on a register state.
+
+
+
